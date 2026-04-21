@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPMart</title>
+    <link rel="stylesheet" href="main-panel.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-brand">
+            <img src="logo.png" class="logo-img" alt="UPMart Logo" class="sidebar-logo">
+        </div>
+
+        <img src="profile.jpg" alt="Profile" class="profile-img">
+        <div class="profile-info">
+            <span class="profile-name">Diane Mahusay</span>
+        </div>
+
+        <ul class="nav-links">
+            <li class="active">
+                <a href="#"><span class="icon">⊞</span> Dashboard</a>
+            </li>
+            <li>
+                <a href="#"><span class="icon">🛒</span> Marketplace</a>
+            </li>
+            <li>
+                <a href="#"><span class="icon">📦</span> My Orders</a>
+            </li>
+
+            <div class="logout-container">
+                <button class="logout-btn">Logout</button>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <nav class="top-nav">
+            <div class="role-switcher">
+                <button class="role-btn active" onclick="switchRole('buyer')">Buyer</button>
+                <button class="role-btn" onclick="switchRole('seller')">Seller</button>
+            </div>
+        </nav>
+        <div class="content-row">
+            <div class="about-text">
+                <h1>Welcome to UPMart, Diane!</h1>
+                <p>Start exploring our marketplace and discover amazing products!</p>
+            </div>
+        </div>
+
+        <section class="categories-container">
+            <div class="category-header">
+                <h3>Top Categories</h3>
+                <a href="#" class="view-all-link">See all</a>
+            </div>
+
+            <div class="category-list">
+                <div class="cat-card">
+                    <div class="cat-icon">📚</div>
+                    <p>Academic</p>
+                </div>
+
+                <div class="cat-card">
+                    <div class="cat-icon">💻</div>
+                    <p>Electronics</p>
+                </div>
+
+                <div class="cat-card">
+                    <div class="cat-icon">🏠</div>
+                    <p>Dorm Life</p>
+                </div>
+
+                <div class="cat-card">
+                    <div class="cat-icon">🍕</div>
+                    <p>Food</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="footer">
+        <p>&copy;2026 UPMart. All rights reserved.</p>
+    </div>
+</body>
+
+</html>
