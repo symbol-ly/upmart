@@ -7,6 +7,7 @@
     <title>UPMart</title>
     <link rel="stylesheet" href="main-panel.css">
     <link rel="icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -22,13 +23,10 @@
 
         <ul class="nav-links">
             <li class="active">
-                <a href="#"><span class="icon">⊞</span> Dashboard</a>
+                <a href="main.html"><span class="icon">🏠︎</span> Dashboard</a>
             </li>
             <li>
                 <a href="#"><span class="icon">🛒</span> Marketplace</a>
-            </li>
-            <li>
-                <a href="#"><span class="icon">📦</span> My Orders</a>
             </li>
 
             <div class="logout-container">
@@ -39,50 +37,53 @@
 
     <div class="main-content">
         <nav class="top-nav">
-            <div class="role-switcher">
-                <button class="role-btn active" onclick="switchRole('buyer')">Buyer</button>
-                <button class="role-btn" onclick="switchRole('seller')">Seller</button>
+            <h1 style="font-size: 1.4rem; margin-top: 10px;"><span class="icon">🏠︎</span> Dashboard</h1>
+            <div class="status-indicators">
+                <button class="icon-btn" id="notifBtn"><span class="material-icons">notifications</span><span
+                        class="notif-badge"></span></button>
+                <button class="icon-btn" id="helpBtn"><span class="material-icons">help_outline</span></button>
             </div>
         </nav>
+
         <div class="content-row">
             <div class="about-text">
-                <h1>Welcome to UPMart, Diane!</h1>
+                <h1 style="color: maroon;">Welcome to UPMart, Diane!</h1>
                 <p>Start exploring our marketplace and discover amazing products!</p>
             </div>
         </div>
 
-        <section class="categories-container">
-            <div class="category-header">
+        <section class="stats-section">
+            <div class="chart-container">
                 <h3>Top Categories</h3>
-                <a href="#" class="view-all-link">See all</a>
+                <canvas id="myChart"></canvas>
             </div>
 
-            <div class="category-list">
-                <div class="cat-card">
-                    <div class="cat-icon">📚</div>
-                    <p>Academic</p>
-                </div>
+            <div class="product-inventory">
+                <div class="bulletin-board">
+                    <div class="bulletin-header">
+                        <h3>UPMart Bulletin</h3>
+                        <span class="limit-info">Max 100 chars</span>
+                    </div>
 
-                <div class="cat-card">
-                    <div class="cat-icon">💻</div>
-                    <p>Electronics</p>
-                </div>
+                    <div class="bulletin-input">
+                        <textarea id="bulletinText" placeholder="Post a quick update..." maxlength="100"></textarea>
+                        <button id="postBtn">Post</button>
+                    </div>
 
-                <div class="cat-card">
-                    <div class="cat-icon">🏠</div>
-                    <p>Dorm Life</p>
-                </div>
-
-                <div class="cat-card">
-                    <div class="cat-icon">🍕</div>
-                    <p>Food</p>
+                    <div id="bulletinList" class="bulletin-list">
+                        <div class="post">Welcome to the UPMart Bulletin! Keep it friendly.</div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <div class="footer">
+            <p>&copy;2026 UPMart. All rights reserved.</p>
+        </div>
     </div>
-    <div class="footer">
-        <p>&copy;2026 UPMart. All rights reserved.</p>
-    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main-dash.js"></script>
 </body>
 
 </html>
